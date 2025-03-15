@@ -10,12 +10,12 @@ const Register = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate("/LoginFrom");  
+        navigate("/");  
     };
 
 return (
 <div className = 'Big'>
-    <from onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
         <h1>Sign up</h1>
         <div className="BOX">
             <input type="text"
@@ -28,18 +28,23 @@ return (
                 <FaUser className='icon' />
             </div>
             <div className="BOX">
-                <input type="text"
+                <input type="Password"
                 placeholder='Password' required /> 
                 <FaLock className='icon' />
             </div>
             <div className="BOX">
-                <input type="text"
+                <input type="Password"
+                placeholder='ConfirmPassword' required /> 
+                <FaLock className='icon' />
+            </div>
+            <div className="BOX">
+                <input type="tel"
                 placeholder='Phone' required /> 
                 <MdOutlineLocalPhone  className='icon'/>
             </div>
             <button type="submit">Sign up</button>
 
-    </from>
+    </form>
 
 </div>
 );
