@@ -1,0 +1,51 @@
+.Big{
+    width: 420px;
+    background: rgb(239, 218, 218);
+    color: #000000;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+.Big h1{
+    font-size: 36px;
+    text-align: center;
+}
+.Big .BOX{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+}
+.BOX input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #000000;
+    padding: 20px 45px 20px 20px;
+}
+.BOX input::placeholder{
+    color: #000000;
+}
+.BOX .icon{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+.Big button{
+    width: 100%;
+    height: 45px;
+    background:#fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+}
