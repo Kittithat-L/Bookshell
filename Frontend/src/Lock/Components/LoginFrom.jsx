@@ -68,6 +68,10 @@ const LoginFrom = () => {
       }
     } else {
       alert(data.message);
+      setFormData({
+        username: '',
+        password: ''
+      });
     }
   };
 
