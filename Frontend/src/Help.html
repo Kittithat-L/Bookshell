@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internet Archive Help Center</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #333;
+}
+.container {
+max-width: 800px;
+margin: 50px auto;
+background: #f5f2e6;
+padding: 20px;
+border-radius: 10px;
+}
+.header {
+background: black;
+color: white;
+padding: 20px;
+text-align: center;
+border-radius: 10px 10px 0 0;
+}
+.search-bar {
+display: flex;
+justify-content: center;
+margin: 20px 0;
+}
+.search-bar input {
+width: 80%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+.search-bar button {
+padding: 10px 15px;
+border: none;
+background: #ccc;
+cursor: not-allowed;
+border-radius: 5px;
+}
+.list {
+padding: 0;
+}
+.list-item {
+display: flex;
+        justify-content: space-between;
+padding: 10px;
+border-bottom: 1px solid #ddd;
+}
+.list-item a {
+text-decoration: none;
+color: black;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1>Internet Archive Help Center</h1>
+<p>How can we help you?</p>
+</div>
+<div class="search-bar">
+<input type="text" placeholder="Search ..." disabled>
+<button disabled>Search</button>
+</div>
+<div class="list">
+<div class="list-item"><a href="#">Archive.org</a> <span>74</span></div>
+<div class="list-item"><a href="#">Donations</a> <span>25</span></div>
+<div class="list-item"><a href="#">Internet Archive Organization</a> <span>2</span></div>
+<div class="list-item"><a href="#">Reports</a> <span>1</span></div>
+<div class="list-item"><a href="#">Resource Guides</a> <span>15</span></div>
+<div class="list-item"><a href="#">The Wayback Machine</a> <span>10</span></div>
+</div>
+</div>
+</body>
+</html>
