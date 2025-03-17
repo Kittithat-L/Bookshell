@@ -1,80 +1,77 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import "./App.css";
 
-import { Search, Menu } from "lucide-react";
+function App() {
+  const [profileImage, setProfileImage] = useState(null);
 
-import "./App.css"; // นำเข้าไฟล์ CSS
-
-export default function HelpCenter() {
-
-  const categories = [
-
-    { name: "Archive.org", count: 74 },
-
-    { name: "Donations", count: 25 },
-
-    { name: "Internet Archive Organization", count: 2 },
-
-    { name: "Reports", count: 1 },
-
-    { name: "Resource Guides", count: 15 },
-
-    { name: "The Wayback Machine", count: 10 },
-
-  ];
-
-  const [search, setSearch] = useState("");
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setProfileImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
   return (
-<div className="container">
-<div className="card">
+    <div className="container">
+      <aside className="sidebar">
+        <h1 className="logo">BOOKSHELL</h1>
+        <nav>
+          <button className="nav-btn">🏠 HOME</button>
+          <button className="nav-btn">🔍 SEARCH</button>
+        </nav>
+        <div className="shelves">
+          <h2>#MY SHELVES</h2>
+          <button className="shelf-btn">MY LIBRARY</button>
+          <button className="shelf-btn">FAVORITES</button>
+        </div>
+        <div className="account-section">
+          <button className="account-btn">👤 My account</button>
+          <button className="account-btn">❓ Help</button>
+          <button className="account-btn">📖 Feedback</button>
+        </div>
+      </aside>
 
-        {/* Header */}
-<div className="header">
-<div>
-<h1>Internet Archive Help Center</h1>
-<p>How can we help you?</p>
-</div>
-<Menu className="menu-icon" />
-</div>
+      <main className="content">
+        <div className="account-container">
+          <h2 className="account-title">MY ACCOUNT</h2>
 
-        {/* Search Bar */}
-<div className="search-bar">
-<div className="search-box">
-<Search className="search-icon" />
-<input
-
-              type="text"
-
-              placeholder="Search ..."
-
-              value={search}
-
-              onChange={(e) => setSearch(e.target.value)}
-
+          <div className="profile-section">
+            <p className="edit-text">edit profile</p>
+            <label htmlFor="profile-upload" className="profile-pic">
+              {profileImage ? (
+                <img src={profileImage} alt="Profile" />
+              ) : (
+                "Upload"
+              )}
+            </label>
+            <input
+              type="file"
+              id="profile-upload"
+              accept="image/*"
+              onChange={handleImageChange}
+              style={{ display: "none" }}
             />
-</div>
-<button className="search-btn">Search</button>
-</div>
+          </div>
 
-        {/* Category List */}
-<div className="content">
-<ul>
+          <div className="input-section">
+            <label className="input-label">Enter username</label>
+            <input type="text" className="input-box" placeholder="Username" />
+          </div>
 
-            {categories.map((item, index) => (
-<li key={index} className="category">
-<a href="#" className="category-name">
+          <div className="input-section">
+            <label className="input-label">Enter email</label>
+            <input type="email" className="input-box" placeholder="Email" />
+          </div>
 
-                  📂 {item.name}
-</a>
-<span className="count">{item.count}</span>
-</li>
-
-            ))}
-</ul>
-</div>
-</div>
-</div>
-
+          <button className="signout-btn">Sign Out</button>
+        </div>
+      </main>
+    </div>
   );
-
 }
+
+export default App;
