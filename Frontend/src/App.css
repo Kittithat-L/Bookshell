@@ -1,38 +1,183 @@
-.App {
-  text-align: center;
-}
+/* Layout */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.card {
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  width: 4000%;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  max-width: 1000px;
+
+  background: #f4f1e1;
+
+  border-radius: 10px;
+
+  box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.2);
+
+  margin-right: 600px
+}
+/* Header */
+
+.header {
+
+  background: black;
+
   color: white;
+
+  padding: 20px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  border-top-left-radius: 10px;
+
+  border-top-right-radius: 10px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.header h1 {
+
+  font-size: 20px;
+
+  font-weight: bold;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header p {
+
+  font-size: 14px;
+
 }
+
+.menu-icon {
+
+  width: 24px;
+
+  height: 24px;
+
+  color: white;
+
+
+}
+
+/* Search Bar */
+
+.search-bar {
+
+  background: #ccc;
+
+  padding: 15px;
+
+  display: flex;
+
+  gap: 10px;
+
+  align-items: center;
+
+
+}
+
+.search-box {
+
+  position: relative;
+
+  flex-grow: 1;
+
+}
+
+.search-box input {
+
+  width: 100%;
+
+  padding: 10px 10px 10px 35px;
+
+  border: 1px solid #aaa;
+
+  border-radius: 5px;
+
+  background: #eee;
+
+}
+
+.search-icon {
+
+  position: absolute;
+
+  left: 10px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 16px;
+
+  height: 16px;
+
+  color: #666;
+
+}
+
+.search-btn {
+
+  background: #888;
+
+  color: white;
+
+  padding: 10px 15px;
+
+  border-radius: 5px;
+
+  border: none;
+
+  cursor: pointer;
+
+}
+
+.search-btn:hover {
+
+  background: #666;
+
+}
+
+/* Category List */
+
+.content {
+
+  padding: 20px;
+
+}
+
+.category {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 8px 0;
+
+  border-bottom: 1px solid #ddd;
+
+}
+
+.category-name {
+
+  text-decoration: none;
+
+  color: #0077cc;
+
+}
+
+.category-name:hover {
+
+  text-decoration: underline;
+
+}
+
+.count {
+
+  color: #555;
+
+} 
